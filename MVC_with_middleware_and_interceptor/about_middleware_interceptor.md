@@ -1,18 +1,23 @@
-# Library Management System
+# **Library Management System**
 
-## Overview
+## **Overview**
 This project is an **enhanced version of the MVC core backend concept**, showcasing the integration of **Middleware** and **Interceptor** into the **Model-View-Controller (MVC)** architecture. The **Library Management System** is a Python-based application that allows users to dynamically add, remove, and view books. The **Middleware** ensures input validation, while the **Interceptor** provides action logging for improved system transparency and debugging.
 
 ---
 
-## Features
+## **Features**
 
-### Core Features:
-1. **Add a Book**: Validates and stores a book with its title and author.
-2. **Remove a Book**: Ensures the title is valid and removes the book if it exists.
-3. **View All Books**: Displays the list of books currently in the library.
+### **Core Features:**
+1. **Add a Book**:
+   - Validates and stores a book with its title and author.
+   - Ensures data integrity during the process.
+2. **Remove a Book**:
+   - Checks the validity of the book title.
+   - Removes the book from the library if it exists.
+3. **View All Books**:
+   - Displays the list of books currently stored in the library.
 
-### Middleware and Interceptor Integration:
+### **Middleware and Interceptor Integration:**
 1. **Middleware**:
    - Acts as a preprocessing layer to validate inputs (e.g., title and author).
    - Ensures that only valid data reaches the **Controller**.
@@ -25,7 +30,7 @@ This project is an **enhanced version of the MVC core backend concept**, showcas
 
 ---
 
-## Architecture
+## **Architecture**
 
 This project follows the **MVC architecture** with enhanced components:
 
@@ -49,16 +54,17 @@ This project follows the **MVC architecture** with enhanced components:
 
 ---
 
-## Workflow
+## **Workflow**
 
-### Middleware:
+### **Middleware:**
 1. **Input Validation**:
    - Ensures book titles and authors are non-empty before processing.
+   - Prevents invalid or incomplete data from reaching the Controller.
 2. **When Middleware Works**:
    - Before adding a book.
    - Before removing a book.
 
-### Interceptor:
+### **Interceptor:**
 1. **Action Logging**:
    - Tracks each user action with detailed logs, including timestamps and success/failure statuses.
 2. **When Interceptor Works**:
@@ -67,15 +73,3 @@ This project follows the **MVC architecture** with enhanced components:
 
 ---
 
-## Example Workflow
-
-### Add a Book Workflow:
-1. User selects **Add a Book**.
-2. **Middleware** validates the title and author.
-   - If invalid, the process stops, and an error message is displayed.
-   - If valid, the **Controller** proceeds.
-3. **Controller** sends the data to the **Model** for storage.
-4. **Model** stores the book.
-5. **Interceptor** logs the action with a `SUCCESS` or `FAILURE` status.
-
----
